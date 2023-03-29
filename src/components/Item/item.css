@@ -1,0 +1,9 @@
+.item {
+  width: 100px;
+  height: 200px;
+  background-color: #cc9;
+  border: 5px solid #040;
+}
+.item_selected {
+  border: 5px solid #f40;
+}
