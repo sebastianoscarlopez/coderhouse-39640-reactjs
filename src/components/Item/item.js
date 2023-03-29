@@ -7,7 +7,7 @@ const Item = ({ children, isSelected, onSelectedChange }) => {
       className={`item ${clsIsSelected}`}
       onClick={() => onSelectedChange(!isSelected)}
     >
-      Here is the item
+      {children}
     </div>
   );
 };
