@@ -12,7 +12,7 @@ const MyFetch = () => {
   }
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+    fetch('http://localhost:3000/pikachu.json')
       .then(responseToJSON)
       .then(updateData)
   }, [])
