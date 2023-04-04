@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Item from "./components/Item/item";
 import MyFetch from "./components/myfetchs";
+import Counter from "./components/CounterWithCustomHook";
 
 function App() {
   const [selected, setSelected] = useState(false);
@@ -52,7 +53,7 @@ function App() {
 
   return (
     <div className="App">
-      <MyFetch />
+      {/* <MyFetch /> */}
       {/* {products.length > 0
         ? products.map(
           (product) => {
@@ -74,7 +75,7 @@ function App() {
         )
         : null
       } */}
-
+      <Counter />
     </div>
   );
 }
