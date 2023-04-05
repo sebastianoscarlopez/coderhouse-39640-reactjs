@@ -3,6 +3,8 @@ import "./App.css";
 import Item from "./components/Item/item";
 import MyFetch from "./components/myfetchs";
 import Counter from "./components/CounterWithCustomHook";
+import PlayingWithHOC from "./components/hocValidation";
+import RenderPropExample from "./components/hocValidation/renderPropExample";
 
 function App() {
   const [selected, setSelected] = useState(false);
@@ -75,7 +77,9 @@ function App() {
         )
         : null
       } */}
-      <Counter />
+      {/* <Counter /> */}
+      <PlayingWithHOC edad={50} />
+      <RenderPropExample />
     </div>
   );
 }
