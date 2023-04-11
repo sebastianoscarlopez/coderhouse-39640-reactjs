@@ -60,6 +60,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/fetch" element={<MyFetch />} />
           <Route exact path="/fetch/:name" element={<MyFetch />} />
           <Route exact path="/counter" element={<Counter />} />
           <Route exact path="/hoc" element={<PlayingWithHOC edad={50} />} />
