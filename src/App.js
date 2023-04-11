@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Item from "./components/Item/item";
+import Home from "./components/home";
 import MyFetch from "./components/myfetchs";
 import Counter from "./components/CounterWithCustomHook";
 import PlayingWithHOC from "./components/hocValidation";
@@ -58,7 +59,8 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/fetch" element={<MyFetch />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/fetch/:name" element={<MyFetch />} />
           <Route exact path="/counter" element={<Counter />} />
           <Route exact path="/hoc" element={<PlayingWithHOC edad={50} />} />
           <Route exact path="/renderprop" element={<RenderPropExample />} />

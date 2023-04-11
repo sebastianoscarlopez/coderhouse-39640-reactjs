@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 const MyFetch = () => {
   const [data, setData] = useState([]);
@@ -11,8 +12,11 @@ const MyFetch = () => {
     setData(realResponse)
   }
 
+  const { name } = useParams();
+
+  const urlPokemon = `https://pokeapi.co/api/v2/pokemon/${name}`
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/pikachu')
+    fetch(urlPokemon)
       .then(responseToJSON)
       .then(updateData)
   }, [])
