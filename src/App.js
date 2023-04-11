@@ -5,6 +5,7 @@ import MyFetch from "./components/myfetchs";
 import Counter from "./components/CounterWithCustomHook";
 import PlayingWithHOC from "./components/hocValidation";
 import RenderPropExample from "./components/hocValidation/renderPropExample";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   const [selected, setSelected] = useState(false);
@@ -55,8 +56,21 @@ function App() {
 
   return (
     <div className="App">
-      {/* <MyFetch /> */}
-      {/* {products.length > 0
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/fetch" element={<MyFetch />} />
+          <Route exact path="/counter" element={<Counter />} />
+          <Route exact path="/hoc" element={<PlayingWithHOC edad={50} />} />
+          <Route exact path="/renderprop" element={<RenderPropExample />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+
+{/* {products.length > 0
         ? products.map(
           (product) => {
             return <Item isSelected={selected} onSelectedChange={setSelected}>
@@ -77,11 +91,3 @@ function App() {
         )
         : null
       } */}
-      {/* <Counter /> */}
-      <PlayingWithHOC edad={50} />
-      <RenderPropExample />
-    </div>
-  );
-}
-
-export default App;
