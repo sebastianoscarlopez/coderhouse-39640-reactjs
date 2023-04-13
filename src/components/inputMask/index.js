@@ -1,17 +1,17 @@
-
 const InputMask = (props) => {
-
   const onKeyDownHandler = (evt) => {
-    console.log(evt);
-    if (evt.key === 'a') {
-      console.log('PRESIONASTE UNA A')
+    console.log(evt.key)
+    const allowedKeys = ["a", "e", "i", "o", "u", "Backspace", "Delete"];
+    if (!allowedKeys.includes(evt.key)) {
+      evt.preventDefault();
     }
-    // evt.preventDefault();
-  }
+  };
 
-  return <div>
-    My mask:  <input onKeyDown={onKeyDownHandler} />
-  </div>
-}
+  return (
+    <div>
+      My mask: <input onKeyDown={onKeyDownHandler} />
+    </div>
+  );
+};
 
 export default InputMask;
