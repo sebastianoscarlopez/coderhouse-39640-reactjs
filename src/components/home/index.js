@@ -4,6 +4,7 @@ const Home = () => (
   <div>
     <h1>Storybook ReactJS 39640</h1>
     <ul>
+      <li><Link to="/events">Input mask</Link></li>
       <li><Link to="/counter">Counter</Link></li>
       <li><Link to="/fetch">Fetch Pikachu</Link></li>
     </ul>
