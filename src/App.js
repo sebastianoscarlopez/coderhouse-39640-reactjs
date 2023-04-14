@@ -7,7 +7,7 @@ import Counter from "./components/CounterWithCustomHook";
 import PlayingWithHOC from "./components/hocValidation";
 import RenderPropExample from "./components/hocValidation/renderPropExample";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import InputMask from "./components/inputMask";
+import InputInterchanged from "./components/InputInterchanged";
 
 function App() {
   const [selected, setSelected] = useState(false);
@@ -66,7 +66,7 @@ function App() {
           <Route exact path="/counter" element={<Counter />} />
           <Route exact path="/hoc" element={<PlayingWithHOC edad={50} />} />
           <Route exact path="/renderprop" element={<RenderPropExample />} />
-          <Route exact path="/events" element={<InputMask />} />
+          <Route exact path="/events" element={<InputInterchanged />} />
         </Routes>
       </BrowserRouter>
     </div>
