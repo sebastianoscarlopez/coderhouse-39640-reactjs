@@ -7,6 +7,7 @@ const Home = () => (
       <li><Link to="/events">Input mask</Link></li>
       <li><Link to="/counter">Counter</Link></li>
       <li><Link to="/fetch">Fetch Pikachu</Link></li>
+      <li><Link to="/context">Context POC (Proof Of Concept)</Link></li>
     </ul>
   </div>
 );

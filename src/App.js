@@ -8,6 +8,7 @@ import PlayingWithHOC from "./components/hocValidation";
 import RenderPropExample from "./components/hocValidation/renderPropExample";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InputInterchanged from "./components/InputInterchanged";
+import SonOfApp from './components/ContextPoc/SonOfApp';
 
 function App() {
   const [selected, setSelected] = useState(false);
@@ -67,6 +68,7 @@ function App() {
           <Route exact path="/hoc" element={<PlayingWithHOC edad={50} />} />
           <Route exact path="/renderprop" element={<RenderPropExample />} />
           <Route exact path="/events" element={<InputInterchanged />} />
+          <Route exact path="/context" element={<SonOfApp />} />
         </Routes>
       </BrowserRouter>
     </div>
