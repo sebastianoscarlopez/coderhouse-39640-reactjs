@@ -16,15 +16,15 @@ const RenderingPoc = () => {
     <>
       <h1>Nivel felicidad</h1>
       <input
-        type="number"
+        type="range"
         value={nivelFelicidad}
         onChange={onNivelFelicidadHandler}
         min={1}
         max={10}
       />
-      {
-        nivelFelicidad < 4 && <p>😢</p>
-      }
+      {nivelFelicidad < 4 && <h1>😢</h1>}
+      {(nivelFelicidad >= 4 && nivelFelicidad <= 7) && <h1>🙂</h1>}
+      {nivelFelicidad > 7 && <h1>😃</h1>}
     </>
   )
 }
