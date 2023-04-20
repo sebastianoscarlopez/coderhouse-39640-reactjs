@@ -9,6 +9,7 @@ import RenderPropExample from "./components/hocValidation/renderPropExample";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InputInterchanged from "./components/InputInterchanged";
 import SonOfApp from './components/ContextPoc/SonOfApp';
+import RenderingPoc from './components/RenderingPoc';
 
 function App() {
   const [selected, setSelected] = useState(false);
@@ -69,6 +70,7 @@ function App() {
           <Route exact path="/renderprop" element={<RenderPropExample />} />
           <Route exact path="/events" element={<InputInterchanged />} />
           <Route exact path="/context" element={<SonOfApp />} />
+          <Route exact path="/rendering" element={<RenderingPoc />} />
         </Routes>
       </BrowserRouter>
     </div>

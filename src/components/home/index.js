@@ -8,6 +8,7 @@ const Home = () => (
       <li><Link to="/counter">Counter</Link></li>
       <li><Link to="/fetch">Fetch Pikachu</Link></li>
       <li><Link to="/context">Context POC (Proof Of Concept)</Link></li>
+      <li><Link to="/rendering">Rendering POC - Nivel de felicidad</Link></li>
     </ul>
   </div>
 );
