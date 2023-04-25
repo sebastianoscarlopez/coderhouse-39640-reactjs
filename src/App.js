@@ -10,6 +10,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InputInterchanged from "./components/InputInterchanged";
 import SonOfApp from './components/ContextPoc/SonOfApp';
 import RenderingPoc from './components/RenderingPoc';
+import FirebaseEcommerce from './components/FirebaseEcommerce';
 
 function App() {
   const [selected, setSelected] = useState(false);
@@ -47,7 +48,6 @@ function App() {
     const mockApiProducts = new Promise(getMockProducts)
 
     const updateProducts = (response) => {
-      console.log(response);
       setProducts(response);
     };
     const showError = (error) => {
@@ -71,6 +71,7 @@ function App() {
           <Route exact path="/events" element={<InputInterchanged />} />
           <Route exact path="/context" element={<SonOfApp />} />
           <Route exact path="/rendering" element={<RenderingPoc />} />
+          <Route exact path="/firestore" element={<FirebaseEcommerce />} />
         </Routes>
       </BrowserRouter>
     </div>
