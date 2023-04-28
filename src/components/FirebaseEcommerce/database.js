@@ -1,4 +1,3 @@
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 
@@ -8,9 +7,15 @@ import { getFirestore } from "firebase/firestore";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// TODO: Replace the following with your app's Firebase project configuration
-console.log('HERE FIRESTORE CONFIGURATION');
-const firebaseConfig = {};
+console.log("ENV FIRESTORE CONFIGURATION");
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId,
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

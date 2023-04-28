@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { db } from "./database";
-import { getDocs, collection, addDoc } from "firebase/firestore";
+import { getDocs, collection, addDoc, query, where } from "firebase/firestore";
 
 const getProducts = async () => {
   const productsCollection = collection(db, "products");
-  const productsDocsRef = await getDocs(productsCollection);
+  const productsCollectionWithQuery = query(productsCollection, where("price", ">", 100));
+  const productsDocsRef = await getDocs(productsCollectionWithQuery);
   const productDocs = productsDocsRef.docs;
   const products = productDocs.map((doc) => {
     return { ...doc.data(), id: doc.id };
@@ -52,15 +53,15 @@ const ProductsList = () => {
     // usando addDoc agregamos la order a la colección "orders"
       // addDoc es una promise, usando .then podemos obtener el id de la nueva order
       addDoc(orderCollection, order)
-      .then((newOrder) => {
-        console.log('DEBERÍA ESTAR EN FIRESTORE!!')
-        console.log(newOrder)
-        setClientName("");
-        setCartItems([]);
-      })
-      .catch(() => {
-        console.log('ALGO SALIO MAL :-(')
-      })
+        .then((newOrder) => {
+          console.log('DEBERÍA ESTAR EN FIRESTORE!!')
+          console.log(newOrder)
+          setClientName("");
+          setCartItems([]);
+        })
+        .catch(() => {
+          console.log('ALGO SALIO MAL :-(')
+        })
     
 
 
