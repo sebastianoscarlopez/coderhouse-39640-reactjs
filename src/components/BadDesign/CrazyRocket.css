@@ -1,0 +1,18 @@
+.rocket-launch {
+  position: relative;
+  top: 0;
+  right: 0px;
+  font-size: 36px;
+  transition: top 1s, right 1s ease-in-out;
+}
+
+.rocket-launch-blastoff {
+  top: -250px;
+  right: -200px;
+}
+
+.rocket-plattform {
+  margin-top: 200px;
+}
+
+

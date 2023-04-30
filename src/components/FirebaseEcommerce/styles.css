@@ -1,0 +1,17 @@
+.product-list {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 10px;
+}
+
+.product {
+  margin: 8px;
+  border: 1px solid rgb(0, 255, 204);
+  background-color: #d1e6F3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 0;
+  gap: 8px;
+}

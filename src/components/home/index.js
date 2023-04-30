@@ -9,7 +9,15 @@ const Home = () => (
       <li><Link to="/fetch">Fetch Pikachu</Link></li>
       <li><Link to="/context">Context POC (Proof Of Concept)</Link></li>
       <li><Link to="/rendering">Rendering POC - Nivel de felicidad</Link></li>
-      <li><Link to="/firestore">Firebase -> Firestore - Products List</Link></li>
+      <li><Link to="/firestore">Firebase / Firestore - Products List</Link></li>
+      <li>
+        <h3>Broken components</h3>
+        <ul>
+          <li><Link to="/cookies-need-dry">Cookies need DRY - (easy)</Link></li>
+          <li><Link to="/infinte-loop">InfiniteLoop - (medium)</Link></li>
+          <li><Link to="/crazy-rocket">CrazyRocket - (hard)</Link></li>
+        </ul>
+      </li>
     </ul>
   </div>
 );

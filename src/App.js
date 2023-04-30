@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import "./App.css";
-import Item from "./components/Item/item";
 import Home from "./components/home";
 import MyFetch from "./components/myfetchs";
 import Counter from "./components/CounterWithCustomHook";
@@ -11,6 +9,10 @@ import InputInterchanged from "./components/InputInterchanged";
 import SonOfApp from './components/ContextPoc/SonOfApp';
 import RenderingPoc from './components/RenderingPoc';
 import FirebaseEcommerce from './components/FirebaseEcommerce';
+import InfiniteLoop from './components/BadDesign/InfiniteLoop';
+import CrazyRocket from './components/BadDesign/CrazyRocket';
+import CookiesNeedDRY from './components/BadDesign/CookiesNeedDRY';
+import "./App.css";
 
 function App() {
   const [selected, setSelected] = useState(false);
@@ -72,6 +74,9 @@ function App() {
           <Route exact path="/context" element={<SonOfApp />} />
           <Route exact path="/rendering" element={<RenderingPoc />} />
           <Route exact path="/firestore" element={<FirebaseEcommerce />} />
+          <Route exact path="/infinte-loop" element={<InfiniteLoop />} />
+          <Route exact path="/crazy-rocket" element={<CrazyRocket />} />
+          <Route exact path="/cookies-need-dry" element={<CookiesNeedDRY />} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -79,25 +84,3 @@ function App() {
 }
 
 export default App;
-
-{/* {products.length > 0
-        ? products.map(
-          (product) => {
-            return <Item isSelected={selected} onSelectedChange={setSelected}>
-              <>
-                <p className="title">
-                  <b>{product.name}</b>
-                </p>
-                <p>{product.description}</p>
-                <p>{product.stock}</p>
-                <img width={50} height={50} src={product.image} alt={product.name} />
-
-                <div>
-                  <button>Add</button>
-                </div>
-              </>
-            </Item>
-          }
-        )
-        : null
-      } */}
